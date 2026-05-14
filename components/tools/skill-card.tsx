@@ -38,6 +38,25 @@ const levelMap: Record<number, string> = {
   3: "精通",
 }
 
+const getBorderColor = (skillId: number): string => {
+  if (skillId >= 90000) return "border-cyan-500/60 dark:border-cyan-400/60 bg-cyan-500/5"
+  const second = Math.floor(skillId / 1000) % 10
+  switch (second) {
+    case 1:
+      return "border-green-600/60 dark:border-green-400/60 bg-green-600/5"
+    case 2:
+      return "border-purple-600/60 dark:border-purple-400/60 bg-purple-600/5"
+    case 3:
+      return "border-blue-600/60 dark:border-blue-400/60 bg-blue-600/5"
+    case 4:
+      return "border-red-600/60 dark:border-red-400/60 bg-red-600/5"
+    case 5:
+      return "border-amber-500/60 dark:border-amber-400/60 bg-amber-500/5"
+    default:
+      return "border-border"
+  }
+}
+
 export function SkillCard({ skill }: SkillCardProps) {
   const { saves, currentSaveId, updateSkillsData } = useSavesStore()
   const [isDialogOpen, setIsDialogOpen] = useState(false)
@@ -114,7 +133,7 @@ export function SkillCard({ skill }: SkillCardProps) {
     <>
       <Card
         onClick={openDialog}
-        className="w-full cursor-pointer transition-all hover:shadow-md active:scale-95"
+        className={`w-full cursor-pointer border-2 transition-all hover:shadow-md active:scale-95 ${getBorderColor(skill.id)}`}
       >
         <CardHeader className="p-1">
           <CardTitle className="truncate text-center text-xs">{skill.name}</CardTitle>
