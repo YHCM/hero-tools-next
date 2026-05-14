@@ -1,0 +1,959 @@
+{
+  "拳脚": [
+    {
+      "id": 11001,
+      "name": "太极拳",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.2, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 11002,
+      "name": "雪影擒拿手",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.1, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 11003,
+      "name": "血杀掌",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.1, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 11004,
+      "name": "真龙天罡掌",
+      "conflict": [14005],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 11005,
+      "name": "百毒掌",
+      "conflict": [14007],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 11006,
+      "name": "伊贺体术",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.1, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 11007,
+      "name": "素心掌",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 11008,
+      "name": "达摩拳法",
+      "conflict": [14006],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 11009,
+      "name": "幻玉手",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.2, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 12001,
+      "name": "虾米拳法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 12002,
+      "name": "咏春拳",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.1, "cost": 0 },
+        { "level": 1, "difficulty": 1.1, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 13001,
+      "name": "通杀拳",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.5, "cost": 0 },
+        { "level": 1, "difficulty": 1.6, "cost": 20 },
+        { "level": 2, "difficulty": 1.7, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 13002,
+      "name": "金蛟游龙掌",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 13003,
+      "name": "纯阳指",
+      "conflict": [15001],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 14001,
+      "name": "雪山烈阳掌",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 14002,
+      "name": "如来神掌",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1 }
+      ]
+    },
+    {
+      "id": 14003,
+      "name": "太阴幽冥爪",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 14004,
+      "name": "玄阴毒掌",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.7, "cost": 0 }]
+    },
+    {
+      "id": 14005,
+      "name": "真·真龙天罡掌",
+      "conflict": [11004],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 14006,
+      "name": "明王伏魔拳",
+      "conflict": [11008],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 14007,
+      "name": "百毒绝命掌",
+      "conflict": [11005],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 15001,
+      "name": "六极指法",
+      "conflict": [13003],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 15002,
+      "name": "断情殇神掌",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    }
+  ],
+  "刀法": [
+    {
+      "id": 21001,
+      "name": "无定刀法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 21002,
+      "name": "血影刀法",
+      "conflict": [24004],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 21003,
+      "name": "川枫一刀流",
+      "conflict": [24002],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 21004,
+      "name": "悲悯刀法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 21005,
+      "name": "绣春刀法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.2, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 22001,
+      "name": "杀猪刀法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.2, "cost": 0 },
+        { "level": 1, "difficulty": 1.4, "cost": 20 },
+        { "level": 2, "difficulty": 1.6, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 23001,
+      "name": "疾风刀法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 23002,
+      "name": "烈火刀法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.4, "cost": 0 },
+        { "level": 1, "difficulty": 1.4, "cost": 20 },
+        { "level": 2, "difficulty": 1.6, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 23003,
+      "name": "六合刀法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 23004,
+      "name": "镖行天下刀法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.6, "cost": 0 }]
+    },
+    {
+      "id": 24001,
+      "name": "雪饮刀法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.7, "cost": 0 },
+        { "level": 2, "difficulty": 1.7, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1 }
+      ]
+    },
+    {
+      "id": 24002,
+      "name": "影忍三刀流",
+      "conflict": [21003],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 24003,
+      "name": "雄霸天下刀法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 24004,
+      "name": "血魔刀法",
+      "conflict": [21002],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 25001,
+      "name": "灭绝十字刀",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    }
+  ],
+  "剑法": [
+    {
+      "id": 31001,
+      "name": "太极剑",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 31002,
+      "name": "雪花剑法",
+      "conflict": [34005],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 31003,
+      "name": "冰清剑法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 32001,
+      "name": "采花剑法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 32002,
+      "name": "玉凤剑法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 33001,
+      "name": "太白剑法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.4, "cost": 0 },
+        { "level": 1, "difficulty": 1.5, "cost": 20 },
+        { "level": 2, "difficulty": 1.6, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 33002,
+      "name": "金蛟剑法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 33003,
+      "name": "玄阳剑法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 34001,
+      "name": "无邪剑法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1 }
+      ]
+    },
+    {
+      "id": 34002,
+      "name": "真武荡魔剑",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 34003,
+      "name": "流星蝴蝶剑",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1 }
+      ]
+    },
+    {
+      "id": 34004,
+      "name": "冰清月华剑",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 34005,
+      "name": "飞雪剑诀",
+      "conflict": [31002],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 35001,
+      "name": "九天剑诀",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    }
+  ],
+  "棍法": [
+    {
+      "id": 41001,
+      "name": "掀摊十八打",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.5, "cost": 0 },
+        { "level": 1, "difficulty": 1.6, "cost": 20 },
+        { "level": 2, "difficulty": 1.7, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 41002,
+      "name": "罗汉棍法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.2, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 42001,
+      "name": "八卦棍法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.1, "cost": 0 },
+        { "level": 1, "difficulty": 1.1, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 42002,
+      "name": "流氓棍法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 42003,
+      "name": "齐眉棍法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 42004,
+      "name": "夜叉棍法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.5, "cost": 0 },
+        { "level": 1, "difficulty": 1.5, "cost": 20 },
+        { "level": 2, "difficulty": 1.7, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 43001,
+      "name": "岳家枪法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 44001,
+      "name": "霸王枪法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1 }
+      ]
+    },
+    {
+      "id": 44002,
+      "name": "燎原枪法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 368 }
+      ]
+    },
+    {
+      "id": 44003,
+      "name": "战神戟法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 45001,
+      "name": "如意棍法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    }
+  ],
+  "暗器": [
+    {
+      "id": 51001,
+      "name": "五毒暗器",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.4, "cost": 0 },
+        { "level": 1, "difficulty": 1.5, "cost": 20 },
+        { "level": 2, "difficulty": 1.6, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 52001,
+      "name": "唐门秘录",
+      "conflict": [53003],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 52002,
+      "name": "投石术",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 53001,
+      "name": "金蛟钉",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 53002,
+      "name": "赌神飞牌",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.4, "cost": 0 },
+        { "level": 1, "difficulty": 1.1, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 53003,
+      "name": "真·唐门秘录",
+      "conflict": [52001],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 54001,
+      "name": "天龙八音指法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1650 }
+      ]
+    },
+    {
+      "id": 54002,
+      "name": "小李飞刀",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 55001,
+      "name": "织梦千针诀",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 1 },
+        { "level": 3, "difficulty": 2.0, "cost": 1 }
+      ]
+    }
+  ],
+  "鞭法": [
+    {
+      "id": 61001,
+      "name": "万花鞭法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.2, "cost": 0 },
+        { "level": 1, "difficulty": 1.3, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 62001,
+      "name": "父爱鞭法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 62002,
+      "name": "无常鞭法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 62003,
+      "name": "游龙鞭法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.3, "cost": 0 },
+        { "level": 1, "difficulty": 1.4, "cost": 20 },
+        { "level": 2, "difficulty": 1.5, "cost": 500 },
+        { "level": 3, "difficulty": 1.8, "cost": 2480 }
+      ]
+    },
+    {
+      "id": 63001,
+      "name": "女王鞭法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 63002,
+      "name": "红拂拂法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 63003,
+      "name": "月影鞭法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 64001,
+      "name": "天女鞭法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 2.0, "cost": 0 },
+        { "level": 2, "difficulty": 2.0, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 64002,
+      "name": "龙骨鞭法",
+      "conflict": [],
+      "insight": [
+        { "level": 0, "difficulty": 1.8, "cost": 0 },
+        { "level": 2, "difficulty": 1.8, "cost": 20 },
+        { "level": 3, "difficulty": 2.0, "cost": 1628 }
+      ]
+    },
+    {
+      "id": 64003,
+      "name": "梵音锁魂链",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    }
+  ],
+  "轻功": [
+    {
+      "id": 71001,
+      "name": "踏雪无痕",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 71002,
+      "name": "踏风登云步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 71003,
+      "name": "血影步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 71004,
+      "name": "御风行",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 71005,
+      "name": "五毒幻行",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 71006,
+      "name": "飞蝶舞步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 71007,
+      "name": "水上漂",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 71008,
+      "name": "影遁之术",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 72001,
+      "name": "草上飞",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 73001,
+      "name": "疾风步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 73002,
+      "name": "鬼影步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 73003,
+      "name": "飞鱼身法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 74001,
+      "name": "神行缥缈步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 74002,
+      "name": "仙风步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 75001,
+      "name": "凌波逍遥步",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    }
+  ],
+  "内功": [
+    {
+      "id": 81001,
+      "name": "冰心诀",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 81002,
+      "name": "太极神功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 81003,
+      "name": "嗜血经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 81004,
+      "name": "四海经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 81005,
+      "name": "百毒秘术",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 81006,
+      "name": "扶桑忍术",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 81007,
+      "name": "月华空灵诀",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.4, "cost": 0 }]
+    },
+    {
+      "id": 81008,
+      "name": "易筋经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 82001,
+      "name": "吐纳法",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 83001,
+      "name": "道天诀",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 83002,
+      "name": "混元功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 83003,
+      "name": "玄天神功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 83004,
+      "name": "金鳞功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 84001,
+      "name": "炼神分心术",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.8, "cost": 0 }]
+    },
+    {
+      "id": 84002,
+      "name": "天蟾功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84003,
+      "name": "真阳不灭功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84004,
+      "name": "洗髓经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84005,
+      "name": "暇玉真经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 84006,
+      "name": "宝玉真经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84007,
+      "name": "太白经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84008,
+      "name": "夺天经",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84009,
+      "name": "大乘无量功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84010,
+      "name": "寒玉功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 84011,
+      "name": "无相神功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 1.8, "cost": 0 }]
+    },
+    {
+      "id": 84012,
+      "name": "罗汉涅槃功",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    },
+    {
+      "id": 85001,
+      "name": "玄渊宝典一重",
+      "conflict": [85002, 85003, 85004],
+      "insight": [{ "level": 0, "difficulty": 1.1, "cost": 0 }]
+    },
+    {
+      "id": 85002,
+      "name": "玄渊宝典二重",
+      "conflict": [85001, 85003, 85004],
+      "insight": [{ "level": 0, "difficulty": 1.2, "cost": 0 }]
+    },
+    {
+      "id": 85003,
+      "name": "玄渊宝典三重",
+      "conflict": [85001, 85002, 85004],
+      "insight": [{ "level": 0, "difficulty": 1.3, "cost": 0 }]
+    },
+    {
+      "id": 85004,
+      "name": "玄渊宝典四重",
+      "conflict": [85001, 85002, 85003],
+      "insight": [{ "level": 0, "difficulty": 1.5, "cost": 0 }]
+    },
+    {
+      "id": 85005,
+      "name": "玄溟秘术",
+      "conflict": [],
+      "insight": [{ "level": 0, "difficulty": 2.0, "cost": 0 }]
+    }
+  ]
+}

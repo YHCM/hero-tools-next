@@ -1,0 +1,13 @@
+dist/
+node_modules/
+.next/
+.turbo/
+coverage/
+pnpm-lock.yaml
+.pnpm-store/
+
+# shadcn/ui
+components/ui/
+
+# hero-tools
+hero-tools/
