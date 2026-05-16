@@ -39,7 +39,7 @@ export function CustomSkillManageDialog({ open, onOpenChange }: CustomSkillManag
 
   return (
     <Dialog open={open} onOpenChange={handleClose}>
-      <DialogContent className="mx-auto my-4 max-w-[90vw] rounded-lg sm:max-w-[500px] md:max-w-2xl">
+      <DialogContent className="mx-auto my-4 rounded-lg sm:max-w-[500px] md:max-w-2xl">
         <DialogHeader>
           <DialogTitle>管理自定义技能</DialogTitle>
           <DialogDescription className="text-sm">

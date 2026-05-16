@@ -19,6 +19,8 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { useSavesStore } from "@/lib/stores/saves-store"
+import { cn } from "@/lib/utils"
+import { Badge } from "@/components/ui/badge"
 
 interface Skill {
   id: number
@@ -43,15 +45,15 @@ const getBorderColor = (skillId: number): string => {
   const second = Math.floor(skillId / 1000) % 10
   switch (second) {
     case 1:
-      return "border-green-600/60 dark:border-green-400/60 bg-green-600/5"
+      return "border-emerald-500/50 dark:border-emerald-400/50 bg-emerald-500/5"
     case 2:
-      return "border-purple-600/60 dark:border-purple-400/60 bg-purple-600/5"
+      return "border-violet-500/50 dark:border-violet-400/50 bg-violet-500/5"
     case 3:
-      return "border-blue-600/60 dark:border-blue-400/60 bg-blue-600/5"
+      return "border-blue-500/50 dark:border-blue-400/50 bg-blue-500/5"
     case 4:
-      return "border-red-600/60 dark:border-red-400/60 bg-red-600/5"
+      return "border-rose-500/50 dark:border-rose-400/50 bg-rose-500/5"
     case 5:
-      return "border-amber-500/60 dark:border-amber-400/60 bg-amber-500/5"
+      return "border-amber-500/50 dark:border-amber-400/50 bg-amber-500/5"
     default:
       return "border-border"
   }
@@ -133,26 +135,29 @@ export function SkillCard({ skill }: SkillCardProps) {
     <>
       <Card
         onClick={openDialog}
-        className={`w-full cursor-pointer border-2 transition-all hover:shadow-md active:scale-95 ${getBorderColor(skill.id)}`}
+        className={cn(
+          "w-full cursor-pointer border-2 transition-shadow hover:shadow-md",
+          getBorderColor(skill.id)
+        )}
       >
         <CardHeader className="p-1">
-          <CardTitle className="truncate text-center text-xs">{skill.name}</CardTitle>
+          <CardTitle className="truncate text-center text-sm">{skill.name}</CardTitle>
         </CardHeader>
         <CardContent className="flex justify-center p-1 pt-0">
           {isLearned ? (
-            <span className="rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-800 dark:bg-green-900/50 dark:text-green-200">
+            <Badge variant="secondary" className="text-xs">
               已学会
-            </span>
+            </Badge>
           ) : (
-            <span className="rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-800 dark:bg-red-900/50 dark:text-red-200">
+            <Badge variant="outline" className="text-xs text-muted-foreground">
               未学会
-            </span>
+            </Badge>
           )}
         </CardContent>
       </Card>
 
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
-        <DialogContent className="mx-auto my-4 max-w-[80vw] rounded-lg sm:max-w-[280px] md:max-w-md">
+        <DialogContent className="mx-auto my-4 rounded-lg sm:max-w-[280px] md:max-w-md">
           <DialogHeader>
             <DialogTitle className="text-lg">{skill.name}</DialogTitle>
             <DialogDescription className="text-sm">
