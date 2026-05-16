@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { useSavesStore, generateSaveColor } from "@/lib/stores/saves-store"
 import {
   DropdownMenu,
@@ -38,6 +38,7 @@ export function SaveManagerDropdown({ className }: SaveManagerDropdownProps) {
     exportAllData,
     importAllData,
     updateSaveName,
+    initDefaults,
   } = useSavesStore()
   const currentSave = currentSaveId ? saves[currentSaveId] : null
 
@@ -47,6 +48,10 @@ export function SaveManagerDropdown({ className }: SaveManagerDropdownProps) {
   const [newSaveName, setNewSaveName] = useState("")
   const [renameValue, setRenameValue] = useState("")
   const fileInputRef = useRef<HTMLInputElement>(null)
+
+  useEffect(() => {
+    initDefaults()
+  }, [initDefaults])
 
   const handleCreate = () => {
     if (newSaveName.trim()) {

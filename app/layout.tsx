@@ -1,5 +1,3 @@
-"use client"
-
 import { Geist_Mono, Inter } from "next/font/google"
 import { AppSidebar } from "@/components/tools/sidebar"
 import { Header } from "@/components/tools/header"

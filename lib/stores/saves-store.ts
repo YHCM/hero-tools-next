@@ -81,7 +81,7 @@ export const useSavesStore = create<SavesState>()(
 
       initDefaults: () => {
         if (Object.keys(get().saves).length === 0) {
-          const defaultId = get().createDefaultSave()
+          const defaultId = get().createSave("默认存档")
           set({ currentSaveId: defaultId })
         }
       },
