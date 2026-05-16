@@ -79,33 +79,25 @@ export function SkillCard({ skill }: SkillCardProps) {
 
   const openDialog = () => setIsDialogOpen(true)
 
-  const removeConflictingSkills = () => {
-    if (skill.conflict && skill.conflict.length > 0 && currentSave) {
-      const updatedSkills = currentSave.skillsData.filter((s) => !skill.conflict.includes(s.id))
-      if (currentSaveId) {
-        updateSkillsData(currentSaveId, updatedSkills)
-      }
-    }
-  }
-
   const learnSkill = () => {
     if (!currentSave || !currentSaveId) return
-
-    const skillData = {
-      id: skill.id,
-      insightLevel: selectedLevel,
-      currentLevel: currentSkillData ? currentSkillData.currentLevel : 1,
-      targetedLevel: currentSkillData ? currentSkillData.targetedLevel : 299,
-    }
 
     setIsDialogOpen(false)
 
     setTimeout(() => {
-      removeConflictingSkills()
+      let updatedSkills = currentSave.skillsData
+      if (skill.conflict && skill.conflict.length > 0) {
+        updatedSkills = updatedSkills.filter((s) => !skill.conflict.includes(s.id))
+      }
 
-      const skillIndex = currentSave.skillsData.findIndex((s) => s.id === skill.id)
-      let updatedSkills = [...currentSave.skillsData]
+      const skillData = {
+        id: skill.id,
+        insightLevel: selectedLevel,
+        currentLevel: currentSkillData ? currentSkillData.currentLevel : 1,
+        targetedLevel: currentSkillData ? currentSkillData.targetedLevel : 299,
+      }
 
+      const skillIndex = updatedSkills.findIndex((s) => s.id === skill.id)
       if (skillIndex > -1) {
         updatedSkills[skillIndex] = skillData
       } else {
