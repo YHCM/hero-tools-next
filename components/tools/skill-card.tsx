@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, use } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import {
@@ -69,13 +69,14 @@ export function SkillCard({ skill }: SkillCardProps) {
   const isLearned = !!currentSkillData
   const currentLevel = currentSkillData?.insightLevel ?? null
 
+  // Sync selectedLevel with current skill's insight level
   useEffect(() => {
-    if (isLearned && currentLevel !== null) {
-      setSelectedLevel(currentLevel)
-    } else {
-      setSelectedLevel(0)
-    }
-  }, [isLearned, currentLevel])
+    const newLevel = currentSkillData?.insightLevel ?? 0
+    const timeout = setTimeout(() => {
+      setSelectedLevel((prev) => (prev !== newLevel ? newLevel : prev))
+    }, 0)
+    return () => clearTimeout(timeout)
+  }, [currentSkillData?.insightLevel])
 
   const openDialog = () => setIsDialogOpen(true)
 

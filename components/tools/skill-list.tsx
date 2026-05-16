@@ -27,7 +27,7 @@ interface SkillListProps {
   categoryIndex: number
   showEssence: boolean
   showCurrentEssence: boolean
-  onToggleCategory: (index: number) => void
+  onToggleCategory: (categoryName: string) => void
   onUpdateSkill: (
     categoryIndex: number,
     skillIndex: number,
@@ -44,7 +44,7 @@ export function SkillList({
   onUpdateSkill,
 }: SkillListProps) {
   const handleToggle = () => {
-    onToggleCategory(categoryIndex)
+    onToggleCategory(category.category)
   }
 
   const handleSkillUpdate = (

@@ -6,7 +6,6 @@ import { useTheme } from "next-themes"
 import {
   Breadcrumb,
   BreadcrumbItem,
-  BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
@@ -27,8 +26,10 @@ export function Header() {
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
+  // Set mounted in an async way to avoid cascading renders
   useEffect(() => {
-    setMounted(true)
+    const timeout = setTimeout(() => setMounted(true), 0)
+    return () => clearTimeout(timeout)
   }, [])
 
   const currentPageName = pageNames[pathname] || "工具"

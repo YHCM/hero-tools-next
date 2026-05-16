@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useMemo } from "react"
+import { useState, useMemo } from "react"
 import skillsData from "@/app/data/skills.json"
 import { useSavesStore } from "@/lib/stores/saves-store"
 import { SkillList } from "@/components/tools/skill-list"
@@ -26,27 +26,82 @@ interface SavedSkillData {
   insightLevel: number
 }
 
+interface MartialArtCategory {
+  category: string
+  open: boolean
+  skills: Array<{
+    name: string
+    difficulty: number
+    currentLevel: number
+    targetLevel: number
+    currentTrueEssence: number
+    targetTrueEssence: number
+    id: number
+  }>
+}
+
 const categoryOrder = ["拳脚", "刀法", "剑法", "棍法", "鞭法", "暗器", "轻功"]
 
+const calculateBaseEssence = (level: number, difficulty: number) => {
+  const essence = (3 / 10127) * Math.pow(level, 3) * difficulty
+  return Math.round(essence)
+}
+
+const processCategoryEssence = (
+  skills: Array<{
+    id: number
+    name: string
+    difficulty: number
+    currentLevel: number
+    targetLevel: number
+  }>
+) => {
+  const skillsWithBaseEssence = skills.map((skill) => ({
+    ...skill,
+    baseCurrentEssence: calculateBaseEssence(skill.currentLevel, skill.difficulty),
+    baseTargetEssence: calculateBaseEssence(skill.targetLevel, skill.difficulty),
+  }))
+
+  const maxCurrentEssence = Math.max(...skillsWithBaseEssence.map((s) => s.baseCurrentEssence))
+  const maxTargetEssence = Math.max(...skillsWithBaseEssence.map((s) => s.baseTargetEssence))
+
+  const firstMaxCurrentIndex = skillsWithBaseEssence.findIndex(
+    (s) => s.baseCurrentEssence === maxCurrentEssence
+  )
+  const firstMaxTargetIndex = skillsWithBaseEssence.findIndex(
+    (s) => s.baseTargetEssence === maxTargetEssence
+  )
+
+  return skillsWithBaseEssence.map((skill, index) => {
+    let currentEssence =
+      index === firstMaxCurrentIndex
+        ? skill.baseCurrentEssence
+        : Math.round(skill.baseCurrentEssence / 2)
+    let targetEssence =
+      index === firstMaxTargetIndex
+        ? skill.baseTargetEssence
+        : Math.round(skill.baseTargetEssence / 2)
+
+    if (skill.currentLevel > 300) {
+      currentEssence += 2
+    }
+    if (skill.targetLevel > 300) {
+      targetEssence += 2
+    }
+
+    return {
+      ...skill,
+      currentTrueEssence: currentEssence,
+      targetTrueEssence: targetEssence,
+    }
+  })
+}
+
 export default function CalculatorPage() {
-  const { saves, currentSaveId, initDefaults, updateSkillsData, customSkills } = useSavesStore()
+  const { saves, currentSaveId, updateSkillsData, customSkills } = useSavesStore()
   const [showEssence, setShowEssence] = useState(true)
   const [showCurrentEssence, setShowCurrentEssence] = useState(false)
-  const [martialArts, setMartialArts] = useState<
-    {
-      category: string
-      open: boolean
-      skills: Array<{
-        name: string
-        difficulty: number
-        currentLevel: number
-        targetLevel: number
-        currentTrueEssence: number
-        targetTrueEssence: number
-        id: number
-      }>
-    }[]
-  >([])
+  const [openCategories, setOpenCategories] = useState<Set<string>>(new Set(categoryOrder))
 
   const skillsByCategory = skillsData as SkillsByCategory
 
@@ -54,61 +109,6 @@ export default function CalculatorPage() {
     if (!currentSaveId) return []
     return saves[currentSaveId]?.skillsData || []
   }, [saves, currentSaveId])
-
-  const calculateBaseEssence = (level: number, difficulty: number) => {
-    const essence = (3 / 10127) * Math.pow(level, 3) * difficulty
-    return Math.round(essence)
-  }
-
-  const processCategoryEssence = (
-    skills: Array<{
-      id: number
-      name: string
-      difficulty: number
-      currentLevel: number
-      targetLevel: number
-    }>
-  ) => {
-    const skillsWithBaseEssence = skills.map((skill) => ({
-      ...skill,
-      baseCurrentEssence: calculateBaseEssence(skill.currentLevel, skill.difficulty),
-      baseTargetEssence: calculateBaseEssence(skill.targetLevel, skill.difficulty),
-    }))
-
-    const maxCurrentEssence = Math.max(...skillsWithBaseEssence.map((s) => s.baseCurrentEssence))
-    const maxTargetEssence = Math.max(...skillsWithBaseEssence.map((s) => s.baseTargetEssence))
-
-    const firstMaxCurrentIndex = skillsWithBaseEssence.findIndex(
-      (s) => s.baseCurrentEssence === maxCurrentEssence
-    )
-    const firstMaxTargetIndex = skillsWithBaseEssence.findIndex(
-      (s) => s.baseTargetEssence === maxTargetEssence
-    )
-
-    return skillsWithBaseEssence.map((skill, index) => {
-      let currentEssence =
-        index === firstMaxCurrentIndex
-          ? skill.baseCurrentEssence
-          : Math.round(skill.baseCurrentEssence / 2)
-      let targetEssence =
-        index === firstMaxTargetIndex
-          ? skill.baseTargetEssence
-          : Math.round(skill.baseTargetEssence / 2)
-
-      if (skill.currentLevel > 300) {
-        currentEssence += 2
-      }
-      if (skill.targetLevel > 300) {
-        targetEssence += 2
-      }
-
-      return {
-        ...skill,
-        currentTrueEssence: currentEssence,
-        targetTrueEssence: targetEssence,
-      }
-    })
-  }
 
   const baseMartialArts = useMemo(() => {
     const getDifficultyByInsightLevel = (insightArray: Skill["insight"], insightLevel: number) => {
@@ -142,10 +142,7 @@ export default function CalculatorPage() {
         if (!savedSkill) return
 
         if (!categories[category]) {
-          categories[category] = {
-            category,
-            skills: [],
-          }
+          categories[category] = { category, skills: [] }
         }
 
         const difficulty = getDifficultyByInsightLevel(skill.insight, savedSkill?.insightLevel || 0)
@@ -170,6 +167,13 @@ export default function CalculatorPage() {
       }))
   }, [skillsByCategory, currentSkillsData, customSkills])
 
+  const martialArts: MartialArtCategory[] = useMemo(() => {
+    return baseMartialArts.map((cat) => ({
+      ...cat,
+      open: openCategories.has(cat.category),
+    }))
+  }, [baseMartialArts, openCategories])
+
   const totalCurrentEssence = useMemo(() => {
     return baseMartialArts.reduce((total, category) => {
       return (
@@ -186,32 +190,16 @@ export default function CalculatorPage() {
     }, 0)
   }, [baseMartialArts])
 
-  useEffect(() => {
-    initDefaults()
-    setMartialArts(
-      baseMartialArts.map((cat) => ({
-        ...cat,
-        open: true,
-      }))
-    )
-  }, [])
-
-  useEffect(() => {
-    setMartialArts((prev) =>
-      baseMartialArts.map((cat) => {
-        const existing = prev.find((c) => c.category === cat.category)
-        return {
-          ...cat,
-          open: existing ? existing.open : true,
-        }
-      })
-    )
-  }, [baseMartialArts])
-
-  const toggleCategory = (index: number) => {
-    setMartialArts((prev) =>
-      prev.map((cat, i) => (i === index ? { ...cat, open: !cat.open } : cat))
-    )
+  const toggleCategory = (categoryName: string) => {
+    setOpenCategories((prev) => {
+      const next = new Set(prev)
+      if (next.has(categoryName)) {
+        next.delete(categoryName)
+      } else {
+        next.add(categoryName)
+      }
+      return next
+    })
   }
 
   const updateSkill = (
@@ -235,7 +223,7 @@ export default function CalculatorPage() {
       insightLevel: existingInsightLevel,
     }
 
-    let updatedSkillsData = [...currentSkillsData]
+    const updatedSkillsData = [...currentSkillsData]
 
     if (savedSkillIndex > -1) {
       updatedSkillsData[savedSkillIndex] = skillDataToSave
